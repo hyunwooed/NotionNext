@@ -43,6 +43,12 @@ const GlobalHead = props => {
     NOTION_CONFIG
   )
 
+  const SEO_NAVER_SITE_VERIFICATION = siteConfig(
+    'SEO_NAVER_SITE_VERIFICATION',
+    null,
+    NOTION_CONFIG
+  )
+
   const BLOG_FAVICON = siteConfig('BLOG_FAVICON', null, NOTION_CONFIG)
 
   const COMMENT_WEBMENTION_ENABLE = siteConfig(
@@ -114,6 +120,12 @@ const GlobalHead = props => {
         <meta
           name='baidu-site-verification'
           content={SEO_BAIDU_SITE_VERIFICATION}
+        />
+      )}
+      {SEO_NAVER_SITE_VERIFICATION && (
+        <meta
+          name='naver-site-verification'
+          content={SEO_NAVER_SITE_VERIFICATION}
         />
       )}
       <meta name='keywords' content={keywords} />
